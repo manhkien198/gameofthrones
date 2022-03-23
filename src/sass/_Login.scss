@@ -1,0 +1,66 @@
+.layout {
+  &__left {
+    background: #1890ff;
+    opacity: 0.25;
+    height: 100vh;
+  }
+  .col-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__main {
+    width: 100%;
+    max-height: 100vh;
+    position: relative;
+    padding: 0 100px;
+    color: #000;
+    &--title {
+      font-size: 24px;
+    }
+    .tab {
+      margin-bottom: 14px;
+      &__ldap {
+        border-top-left-radius: 4px;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 5px 0;
+        transition: all 0.3s linear;
+        cursor: pointer;
+      }
+      &__internal {
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 5px 0;
+        border-top-right-radius: 4px;
+        transition: all 0.3s linear;
+        cursor: pointer;
+      }
+    }
+    .active {
+      background: #e79c45;
+      color: #fff;
+    }
+    .forgot-password {
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .layout__main {
+    padding: 30% 20%;
+  }
+}
+
+@media (max-width: 414px) {
+  .layout__main {
+    padding: 200px 20px;
+    width: 100vw;
+  }
+}
