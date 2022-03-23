@@ -7,7 +7,7 @@ export default function MainLayout() {
   const { Header, Content, Footer, Sider } = Layout;
   const navi = useNavigate();
   const handleLogout = () => {
-    navi("/login");
+    navi("/");
   };
   return (
     <Layout>

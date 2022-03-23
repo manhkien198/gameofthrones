@@ -9,7 +9,7 @@ const Login = () => {
   const [form] = Form.useForm();
   const [formLayout, setFormLayout] = useState("horizontal");
   const onFinish = async (value: ValueLogin) => {
-    navi("/");
+    navi("/home");
   };
 
   return (
