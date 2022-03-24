@@ -75,12 +75,6 @@ function Books() {
         <Divider />
 
         <Row>
-          <Col span={12}>Name</Col>
-          <Col span={12}>{book?.name}</Col>
-        </Row>
-        <Divider />
-
-        <Row>
           <Col span={12}>Number of pages</Col>
           <Col span={12}>{book?.numberOfPages}</Col>
         </Row>
