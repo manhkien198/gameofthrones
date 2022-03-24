@@ -2,11 +2,15 @@ import { LogoutOutlined } from "@ant-design/icons";
 import { Layout } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import Avt from "../../assets/Setting.svg";
+import { useGlobalContext } from "../../Context/Context";
 import Books from "../pages/Books";
 export default function MainLayout() {
-  const { Header, Content, Footer, Sider } = Layout;
+  const { Header, Content } = Layout;
   const navi = useNavigate();
+  const { setLogged } = useGlobalContext();
+
   const handleLogout = () => {
+    setLogged(false);
     navi("/");
   };
   return (

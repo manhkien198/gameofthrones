@@ -1,15 +1,19 @@
-import { LockTwoTone, UserOutlined, LockOutlined } from "@ant-design/icons";
+import { LockTwoTone, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Col, Form, Input, Row } from "antd";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { rulePassword, ruleUsername } from "./constant/constants";
+import { useGlobalContext } from "../../Context/Context";
 import { ValueLogin } from "../../models";
+import { rulePassword, ruleUsername } from "./constant/constants";
 const Login = () => {
+  const { setLogged } = useGlobalContext();
   const navi = useNavigate();
-  const [form] = Form.useForm();
-  const [formLayout, setFormLayout] = useState("horizontal");
   const onFinish = async (value: ValueLogin) => {
-    navi("/home");
+    if (value.username === "admin" && value.password === "123456") {
+      setLogged(true);
+      navi("/home");
+    } else {
+      navi("/");
+    }
   };
 
   return (
@@ -26,8 +30,6 @@ const Login = () => {
             className="login-form"
             initialValues={{
               remember: true,
-              username: "admin",
-              password: "123456",
             }}
             onFinish={onFinish}
           >
