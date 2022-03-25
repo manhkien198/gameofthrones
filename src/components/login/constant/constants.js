@@ -4,8 +4,8 @@ export const ruleUsername = [
     message: "Tên người dùng không được để trống!",
   },
   { whitespace: true },
-  { min: 3 },
-  { max: 50 },
+  { min: 3, messages: "Mật khẩu phải tối thiểu 3 kí tự" },
+  { max: 50, messages: "Mật khẩu phải tối đa 50 kí tự" },
 ];
 export const rulePassword = [
   {
