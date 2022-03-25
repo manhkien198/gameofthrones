@@ -12,8 +12,8 @@ export const rulePassword = [
     required: true,
     message: "Mật khẩu không được để trống!",
   },
-  { min: 6 },
-  { max: 50 },
+  { min: 6, messages: "Mật khẩu phải tối thiểu 6 kí tự" },
+  { max: 50, messages: "Mật khẩu phải tối đa 50 kí tự" },
 ];
 export const TOKEN = {
   ACCESSTOKEN: "Access_Token",
