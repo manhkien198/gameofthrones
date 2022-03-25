@@ -17,7 +17,7 @@ export default function MainLayout() {
     <Layout>
       <Header className="header">
         <div className="header__logo">
-          <Link to="/">GAMEOFTHRONES</Link>
+          <Link to="/home">GAMEOFTHRONES</Link>
         </div>
         <div className="header__add">
           <div className="header__add--user user">

@@ -3,7 +3,6 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.scss";
 import MainLayout from "./components/Layout/Layout";
 import Login from "./components/login";
-import Books from "./components/pages/Books";
 import { useGlobalContext } from "./Context/Context";
 function App() {
   const navi = useNavigate();
